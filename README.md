@@ -4,7 +4,7 @@
 A lightweight e-commerce cart built with React functional components.
 
 ## How to Run
-1. **Clone the repo**: `git clone <repo-url>`
+1. **Clone the repo**: `[git clone <repo-url>](https://github.com/IanC-1/nhs-tech-test-1.git)`
 2. **Install dependencies**: `npm install`
 3. **Start development server**: `npm run dev`
 4. **Build for production**: `npm run build`
