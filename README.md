@@ -1,16 +1,24 @@
-# React + Vite
+# nhs-tech-test
+# React Cart Simulation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight e-commerce cart built with React functional components.
 
-Currently, two official plugins are available:
+## How to Run
+1. **Clone the repo**: `[git clone <repo-url>](https://github.com/IanC-1/nhs-tech-test-1.git)`
+2. **Install dependencies**: `npm install`
+3. **Start development server**: `npm run dev`
+4. **Build for production**: `npm run build`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- **Local Persistence**: Items remain in cart after browser refresh via `localStorage`.
+- **Live Updates**: Totals and subtotals recalculate immediately on quantity change.
+- **Safety**: Items are removed if quantity hits zero; totals never go negative.
 
-## React Compiler
+## Testing
+Run `npm test` to execute the Vitest suite.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### What is tested?
+The `useCart` hook logic is verified to ensure:
+1. Adding products correctly updates the total.
+2. Decrementing quantity below zero removes the item.
+3. The total price is accurately derived from current state.
