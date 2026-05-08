@@ -1,0 +1,73 @@
+/* Basic styles for the React Cart Simulation */
+
+:root {
+  --primary-colour: #000000;
+  --secondary-colour: #ffffff;
+  --background-colour: #f0f0f0;
+  --product-card-background-colour: #fefefe;
+  --primary-button-background-colour: #cccccc;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  color: var(--primary-colour);
+}
+
+.container {
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--background-colour);
+}
+
+.product-list {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  border: 1px solid var(--background-colour);
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--product-card-background-colour);
+}
+
+.product-card button {
+  background-color: var(--primary-button-background-colour);
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.cart-container {
+  border-top: 2px solid var(--background-colour);
+  padding-top: 20px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--background-colour);
+}
+
+.quantity-controls button {
+  cursor: pointer;
+  margin: 0 0.75rem;
+  padding: 2px 8px;
+  background-color: var(--primary-button-background-colour);
+  border: none;
+  border-radius: 5px;
+}
+
+.total-section {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
